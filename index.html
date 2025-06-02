@@ -29,10 +29,34 @@ Pan tujhya samor aalo ki shabda shodhun hi yet nahi..."
   <script src="script.js"></script>
   <!-- Popup Container -->
 <div class="popup" id="popup">
-  <h2>Hi 💕</h2>
-  <p>Kya tum ready ho thoda sa pyaar mehsoos karne ke liye?</p>
-  <button onclick="closePopup()">Of course!</button>
-</div>
+    <h2>Hi 💕</h2>
+    <p>Kya tum ready ho thoda sa pyaar mehsoos karne ke liye?</p>
+    <button onclick="closePopup()">Of course!</button>
+  </div>
+
+  <!-- Blur-able Content Wrapper -->
+  <div id="mainContent">
+    <!-- Your existing site content -->
+    <button id="playBtn" onclick="playMusic()">▶ Play Love Tune</button>
+    <audio id="loveSong" src="music.mp3"></audio>
+  </div>
+
+  <script>
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('mainContent').classList.remove('blurred');
+    }
+
+    function playMusic() {
+      const song = document.getElementById("loveSong");
+      song.play();
+    }
+
+    // On page load, apply blur to content
+    window.onload = function() {
+      document.getElementById('mainContent').classList.add('blurred');
+    };
+  </script>
 
 </body>
 </html>
