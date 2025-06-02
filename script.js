@@ -23,5 +23,10 @@ function showLove() {
     isPlaying = !isPlaying;
   });
 
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+
 
 
