@@ -81,6 +81,11 @@ button:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
 .popup {
   position: fixed;
   top: 50%;
@@ -115,9 +120,3 @@ button:hover {
 .popup button:hover {
   background-color: #cc0059;
 }
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
