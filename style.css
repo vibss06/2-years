@@ -120,3 +120,11 @@ button:hover {
 .popup button:hover {
   background-color: #cc0059;
 }
+
+#popupButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
